@@ -1,0 +1,44 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-13/img4.webp" class="swiper-slide" alt="セミオーダー住宅 Web広告用バナー">
+        <img src="/images/works/banner-13/img1.webp" class="swiper-slide" alt="セミオーダー住宅 Web広告用バナー">
+        <img src="/images/works/banner-13/img2.webp" class="swiper-slide" alt="セミオーダー住宅 Web広告用バナー">
+        <img src="/images/works/banner-13/img3.webp" class="swiper-slide" alt="セミオーダー住宅 Web広告用バナー">
+        <img src="/images/works/banner-13/img5.webp" class="swiper-slide" alt="セミオーダー住宅 Web広告用バナー">
+        <img src="/images/works/banner-13/img6.webp" class="swiper-slide" alt="セミオーダー住宅 Web広告用バナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">セミオーダー住宅 Web広告用バナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>セミオーダー住宅のWeb広告用バナーを作成しました。<br>
+          「売建」という一般的にあまり浸透していない受注形式であるため、複数のキャッチコピーの組み合わせてパターンを作りました。<br>
+          デザインが「選べる」ことも伝わるよう、外観デザインを複数配置したのもポイントです。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>

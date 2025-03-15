@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import WorksList from "../components/Works-list.astro";
+import "../styles/global.scss";
+// import "../styles/works.scss";
+import "../scripts/global.js";
+---
+
+<Layout>
+  <Header />
+  <!-- <Welcome /> -->
+  <div class="head-text">
+    <p>Here is my portfolio. I hope you enjoy browsing! &#8675;</p>
+  </div>
+  <main>
+    <div class="container">
+      <WorksList />
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../styles/variables" as *;
+
+  .head-text {
+    text-align: right;
+    border-bottom: solid 1px $black;
+    padding: 1rem 2vw 1rem 0;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  /* トップページの制作実績は9件まで */
+  // .works-item.is-show {
+  //   &:nth-child(n + 5) {
+  //     // display: none;
+  //     background: pink;
+  //   }
+  // }
+
+  .more-btn {
+    text-align: center;
+    margin-top: 2rem;
+  }
+</style>

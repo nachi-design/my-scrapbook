@@ -1,0 +1,64 @@
+---
+import "../styles/works.scss";
+---
+
+<div class="works-detail">
+  <div class="container">
+    <div class="works-detail__wrapper">
+      <div class="works-detail__slider">
+        <!-- スライダー -->
+        <div class="swiper">
+          <slot name="slides" />
+          <div class="swiper-button swiper-button-prev"></div>
+          <div class="swiper-button swiper-button-next"></div>
+        </div>
+        <div class="swiper-thumbnail">
+          <slot name="slides" />
+        </div>
+      </div>
+      <!-- 情報 -->
+      <div class="works-detail__text">
+        <slot name="text" />
+      </div>
+    </div>
+
+    <div class="works-detail__back">
+      <a href="/works/" class="btn-line-black">&#8672; 他の制作物を見る</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import { Autoplay, Navigation, Pagination, Thumbs } from "swiper/modules";
+  import "swiper/css/bundle";
+
+  // サムネイルスライダーの初期化
+  const thumbnailSwiper = new Swiper(".swiper-thumbnail", {
+    modules: [Navigation],
+    slidesPerView: 4, // サムネイルの数
+    watchSlidesProgress: true, // 選択されているサムネイルをハイライト
+  });
+
+  // メインスライダーの初期化（サムネイルと連動）
+  const swiper = new Swiper(".swiper", {
+    modules: [Autoplay, Navigation, Pagination, Thumbs],
+    loop: true,
+    slidesPerView: 1,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: thumbnailSwiper, // サムネイルスライダーと連動！
+    },
+  });
+</script>

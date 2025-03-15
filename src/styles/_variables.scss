@@ -1,0 +1,103 @@
+/*--------------------------------
+
+variavles.scss
+
+--------------------------------*/
+/*--------------------------------
+color
+--------------------------------*/
+$black: #3a3a3a;
+$white: #fff;
+$yellow-green: #BFFF52;
+$pink: #ff6c6c;
+
+/*--------------------------------
+media query
+--------------------------------*/
+
+$breakpoint-min: (
+    'xs': 415px,
+    'sm': 577px,
+    'md': 769px,
+    'lg': 993px,
+    'xl': 1201px,
+    ) !default;
+
+$breakpoint-max: (
+    'xs': 414px,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    ) !default;
+
+@mixin mq-min($breakpoint: md) {
+    @media screen and (min-width: #{map-get($breakpoint-min, $breakpoint)}) {
+        @content;
+    }
+}
+
+@mixin mq-max($breakpoint: md) {
+    @media screen and (max-width: #{map-get($breakpoint-max, $breakpoint)}) {
+        @content;
+    }
+}
+
+//使用例
+//()内にxs〜xlを設定、初期値はmd
+
+// @include mq-min() {
+// }
+
+// @include mq-max() {
+// }
+
+@mixin flex($wrap: nowrap, $jc: center, $ai: center) {
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+//使用例
+//@include flex(wrap,space-between,center);
+
+@mixin flex-center() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid($columns: 1fr 1fr, $gap: 30px) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+}
+
+//使用例
+//@include grid(1fr 1fr 1fr,30px);
+
+
+@mixin pa-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%
+    );
+}
+
+@mixin pa-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@mixin box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin transition {
+    transition: all 0.5s;
+}

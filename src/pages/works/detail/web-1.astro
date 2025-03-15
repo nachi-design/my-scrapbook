@@ -1,0 +1,45 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/web-1/img-mockup.webp" class="swiper-slide" alt="警備派遣会社コーポレートサイト">
+        <img src="/images/works/web-1/img-pick1.webp" class="swiper-slide" alt="警備派遣会社コーポレートサイト">
+        <img src="/images/works/web-1/img-pick2.webp" class="swiper-slide" alt="警備派遣会社コーポレートサイト">
+        <img src="/images/works/web-1/img-pick3.webp" class="swiper-slide" alt="警備派遣会社コーポレートサイト">
+        <img src="/images/works/web-1/img-pick4.webp" class="swiper-slide" alt="警備派遣会社コーポレートサイト">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">警備派遣会社コーポレートサイト</h1>
+        <div class="works-detail__tags">
+          <p>Webデザイン</p>
+          <p>コーディング</p>
+        </div>
+        <div class="works-detail__description">
+          <p>既存顧客のグループ会社の立ち上げにともない、ロゴとWebサイトを新規制作しました。事業内容は警備派遣ですが、あえて警備色は出さないというご要望をいただき、優しい色合いとモチーフを使って女性をターゲットにデザインしました。</p>
+        </div>
+        <a href="https://ixme.tokyo/" target="_blank" class="btn-color-green">VISIT SITE <i
+          class="fa-solid fa-link"></i></a>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

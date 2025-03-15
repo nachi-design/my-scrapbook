@@ -1,0 +1,46 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/web-5/img-mockup.webp" class="swiper-slide" alt="注文住宅ブランドLP">
+        <img src="/images/works/web-5/img-pick1.webp" class="swiper-slide" alt="注文住宅ブランドLP">
+        <img src="/images/works/web-5/img-pick2.webp" class="swiper-slide" alt="注文住宅ブランドLP">
+        <img src="/images/works/web-5/img-pick3.webp" class="swiper-slide" alt="注文住宅ブランドLP">
+        <img src="/images/works/web-5/img-pick4.webp" class="swiper-slide" alt="注文住宅ブランドLP">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">注文住宅ブランドLP</h1>
+        <div class="works-detail__tags">
+          <p>Webデザイン</p>
+          <p>コーディング</p>
+        </div>
+        <div class="works-detail__description">
+          <p>注文住宅事業の来店予約・資料請求獲得のためのページとして作成しました。<br>
+          設計やインテリアのデザインを強みとして押し出す方向性で、住宅のデザイン性を重視する30代の女性をターゲットにデザインしました。</p>
+        </div>
+        <a href="https://holidays-design.com/landing/holidays-design" target="_blank" class="btn-color-green">VISIT SITE <i
+          class="fa-solid fa-link"></i></a>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

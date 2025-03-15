@@ -1,0 +1,205 @@
+/*--------------------------------
+
+global.scss
+
+--------------------------------*/
+@use './variables' as *;
+
+:root {
+    font-family: "Montserrat", "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: 500;
+    font-size: 62.5%;
+    color: $black;
+    letter-spacing: 0.05rem;
+    line-height: 1.8;
+
+    @media screen and (min-width: 1920px) {
+        font-size: 71.875%;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: 58.0375%;
+    }
+
+    @media screen and (max-height: 650px) and (min-width: 993px) {
+        font-size: 58.0375%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+	@include transition;
+
+	&:hover {
+		@include transition;
+	}
+}
+
+/*--------------------------------
+reset
+--------------------------------*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+li {
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li,figure,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,small,strong,b,i,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,article,nav,section {
+    font-size: 1.4rem;
+    font-weight: inherit;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	&::after {
+		content: '';
+		background: url("/images/bg-noise.png") repeat;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+header, footer, main {
+	position: relative;
+	z-index: 1;
+}
+
+/*--------------------------------
+common style
+--------------------------------*/
+
+.container {
+	max-width: 1680px;
+	padding: 60px 5vw 90px;
+	margin: 0 auto;
+
+	@include mq-max() {
+		padding-top: 45px;
+		padding-bottom: 50px;
+	}
+}
+
+.section-container {
+	margin-bottom: 5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include mq-max(sm) {
+		margin-bottom: 3rem;
+	}
+}
+
+.page-ttl {
+	font-size: 2.6rem;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.section-ttl {
+	font-size: 2rem;
+}
+
+// ページ横の縦書きテキスト
+.vertical-text {
+	display: inline-block;
+    letter-spacing: 2px;
+    position: absolute;
+    writing-mode: vertical-lr;
+    top: 60px;
+    left: 2vw;
+
+	@include mq-max() {
+		font-size: 1rem;
+		letter-spacing: 1px;
+		writing-mode: inherit;
+		top: 1rem;
+		left: auto;
+		right: 3vw;
+	}
+}
+
+// ボタン 黒ライン
+.btn-line-black {
+	display: inline-block;
+	position: relative;
+	padding: 1.5rem 3rem;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: $black;
+	background: none;
+	border: 1px solid $black;
+	border-radius: 50px;
+	transition: 0.3s;
+
+	&:hover {
+		background-color: $yellow-green;
+		border-color: $yellow-green;
+		transform: translateY(-3px);
+		@include box-shadow;
+	}
+}
+
+// ボタン 黄緑
+.btn-color-green {
+	display: inline-block;
+	position: relative;
+	padding: 1.5rem 3rem;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: $black;
+	background: $yellow-green;
+	border-radius: 50px;
+	transition: 0.3s;
+
+	&:hover {
+		background-color: $black;
+		color: $white;
+		transform: translateY(-3px);
+		@include box-shadow;
+	}
+}
+
+// ホバー時に画像が拡大する
+.hover-img {
+	&__img {
+		overflow: hidden;
+
+		img {
+			@include transition;
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+			@include transition;
+		}		
+	}
+}
+
+// 中央寄せ
+.text-center {
+	text-align: center;
+}

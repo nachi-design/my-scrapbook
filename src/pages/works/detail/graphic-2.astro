@@ -1,0 +1,42 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/graphic-2/img1.webp" class="swiper-slide" alt="二つ折りパンフレット">
+        <img src="/images/works/graphic-2/img2.webp" class="swiper-slide" alt="二つ折りパンフレット">
+        <img src="/images/works/graphic-2/img3.webp" class="swiper-slide" alt="二つ折りパンフレット">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">会社案内パンフレット</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <!-- <p>バナー</p> -->
+          <p>印刷物</p>
+          <p>二つ折りパンフレット</p>
+        </div>
+        <div class="works-detail__description">
+          <p>清掃業や警備業を中心に展開する企業様の会社案内を作成しました。<br>
+            事業内容やコーポレートカラーに合わせ、青を基調としたデザインに仕上げています。<br>
+            表紙は、写真をロゴのシンボルマークで切り抜き、印象に残るよう工夫しました。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>

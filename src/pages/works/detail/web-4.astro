@@ -1,0 +1,47 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/web-4/img-mockup.webp" class="swiper-slide" alt="コーポレートサイト">
+        <img src="/images/works/web-4/img-pick1.webp" class="swiper-slide" alt="コーポレートサイト">
+        <img src="/images/works/web-4/img-pick2.webp" class="swiper-slide" alt="コーポレートサイト">
+        <img src="/images/works/web-4/img-pick3.webp" class="swiper-slide" alt="コーポレートサイト">
+        <img src="/images/works/web-4/img-pick4.webp" class="swiper-slide" alt="コーポレートサイト">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">コーポレートサイト</h1>
+        <div class="works-detail__tags">
+          <p>Webデザイン</p>
+          <p>コーディング</p>
+        </div>
+        <div class="works-detail__description">
+          <p>砕石事業を手がける企業様のコーポレートサイトを作成しました。<br>
+            環境に配慮した事業を展開されているため、クリーンで明るい印象を与えるカラーや写真を選定しています。<br>
+            また、図や表を活用し、事業内容を分かりやすく整理することを意識しました。</p>
+        </div>
+        <a href="https://nachi-design.github.io/demo-site_view/nihon-saiseki" target="_blank" class="btn-color-green">VISIT SITE <i
+          class="fa-solid fa-link"></i></a>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

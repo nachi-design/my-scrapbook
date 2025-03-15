@@ -1,0 +1,40 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/graphic-6/img2.webp" class="swiper-slide" alt="セミナーチラシ">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">セミナーチラシ</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <!-- <p>バナー</p> -->
+          <p>印刷物</p>
+          <p>チラシ</p>
+        </div>
+        <div class="works-detail__description">
+          <p>不動産営業向けセミナーのチラシを作成しました。<br>
+          若い営業職の方をターゲットに、アウトラインを強調したトレンド感のあるデザインにしました。<br>
+          堅苦しくなりすぎないよう、写真とアイコンを組み合わせ、親しみやすく直感的に情報を伝えられるよう工夫しました。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,43 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-14/img1.webp" class="swiper-slide" alt="学割キャンペーンバナー">
+        <img src="/images/works/banner-14/img2.webp" class="swiper-slide" alt="学割キャンペーンバナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">パーソナルジム キャンペーンバナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>パーソナルジムの初回体験キャンペーンのバナーを作成しました。<br>
+          初心者マークのアイコンと、メインカラーのグリーンで、ターゲットが初心者と視覚的に分かるようなデザインに仕上げております。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

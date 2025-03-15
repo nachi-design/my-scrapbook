@@ -1,0 +1,50 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-6/img1.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img2.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img3.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img4.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img5.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img6.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img7.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+        <img src="/images/works/banner-6/img8.webp" class="swiper-slide" alt="リノベーション Web広告用バナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">リノベーション Web広告用バナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>リノベーション会社のWeb広告用バナーを作成しました。<br>
+          LPのトーンに合わせたデザインで作成。<br>
+          画像を複数配置したパターン、1枚の画像を大きく見せるパターンなど、様々なレイアウトで反響のテストを行いました。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

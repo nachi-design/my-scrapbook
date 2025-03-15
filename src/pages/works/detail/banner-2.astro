@@ -1,0 +1,43 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-2/img1.webp" class="swiper-slide" alt="ブライダル キャンペーンバナー">
+        <img src="/images/works/banner-2/img2.webp" class="swiper-slide" alt="ブライダル キャンペーンバナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">ブライダル キャンペーンバナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>ブライダルサービスのサイトに掲載するバナーを作成しました。<br>
+            キャンペーン時期に合わせて季節感のある色の組み合わせに。<br>写真に合わせたブーケのあしらいで全体の統一感を出しながら、オトクなキャンペーンを打ち出しています。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

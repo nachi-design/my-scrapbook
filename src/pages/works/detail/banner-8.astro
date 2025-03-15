@@ -1,0 +1,46 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-8/img1.webp" class="swiper-slide" alt="注文住宅 Web広告用バナー">
+        <img src="/images/works/banner-8/img2.webp" class="swiper-slide" alt="注文住宅 Web広告用バナー">
+        <img src="/images/works/banner-8/img3.webp" class="swiper-slide" alt="注文住宅 Web広告用バナー">
+        <img src="/images/works/banner-8/img4.webp" class="swiper-slide" alt="注文住宅 Web広告用バナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">注文住宅 Web広告用バナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>工務店のWeb広告用バナーを作成しました。<br>
+          LPのデザイントーンに合わせ、事例画像をメインにした上品なデザインに仕上げています。<br>
+          配信先がMeta広告のため、家づくりを検討している人がInstagramで「この家、いいな」と感じてもらえるようなイメージで制作しました。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

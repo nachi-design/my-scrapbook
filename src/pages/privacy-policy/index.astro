@@ -1,0 +1,67 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.scss";
+import '../../scripts/global.js';
+---
+
+<Layout title="プライバシーポリシー | Nachi web design" description="当サイトのプライバシーポリシーです。">
+  <Header />
+  <main>
+    <p class="vertical-text">PRIVACY POLICY</p>
+    <div class="privacy container">
+      <h1 class="page-ttl">プライバシーポリシー</h1>
+
+      <section class="section-container">
+        <p>Nachi design（以下、「当方」といいます。）は、お問い合わせフォームを通じて取得した個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。</p>
+      </section>
+  
+      <section class="section-container">
+        <h2 class="section-ttl">1. 個人情報の取得</h2>
+        <p>当方は、お問い合わせフォームを通じて、氏名、メールアドレス、電話番号などの個人情報を取得することがあります。</p>
+      </section>
+      <section class="section-container">
+        <h2 class="section-ttl">2. 個人情報の利用目的</h2>
+        <p>取得した個人情報は、以下の目的の範囲内で利用いたします。<br>
+          ・お問い合わせへの対応<br>
+          ・業務上の連絡<br>
+          ・サービス向上のための分析<br>
+          ・法令に基づく対応</p>
+      </section>
+      <section class="section-container">
+        <h2 class="section-ttl">3. 個人情報の第三者提供</h2>
+        <p>当方は、以下の場合を除き、取得した個人情報を第三者に提供することはありません。<br>
+          ・ご本人の同意がある場合<br>
+          ・法令に基づき提供が必要な場合</p>
+      </section>
+      <section class="section-container">
+        <h2 class="section-ttl">4. 個人情報の管理</h2>
+        <p>当方は、個人情報の漏えい、滅失、改ざんを防止するために、適切な管理を行います。</p>
+      </section>
+      <section class="section-container">
+        <h2 class="section-ttl">5. 個人情報の開示・訂正・削除</h2>
+        <p>ご本人からの個人情報の開示・訂正・削除の請求があった場合は、ご本人確認の上、速やかに対応いたします。</p>
+      </section>
+      <section class="section-container">
+        <h2 class="section-ttl">6. 免責事項</h2>
+        <p>当方のウェブサイトからリンクされた外部サイトにおける個人情報の取り扱いについては、当方は責任を負いません。</p>
+      </section>
+      <section class="section-container">
+        <h2 class="section-ttl">7. 本ポリシーの変更</h2>
+        <p>当方は、必要に応じて本ポリシーを変更することがあります。変更後の内容は、本ウェブサイト上に掲載した時点で有効となります。</p>
+      </section>
+
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../styles/variables" as *;
+
+  .privacy {
+    max-width: 950px;
+  }
+
+</style>

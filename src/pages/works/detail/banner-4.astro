@@ -1,0 +1,44 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-4/img1.webp" class="swiper-slide" alt="パーソナルジム キャンペーンバナー">
+        <img src="/images/works/banner-4/img2.webp" class="swiper-slide" alt="パーソナルジム キャンペーンバナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">パーソナルジム キャンペーンバナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>パーソナルジムのサイトに掲載するキャンペーンバナーを作成しました。<br>
+            本格的なトレーニングコースでしっかり鍛え上げたい人をターゲットに、ネイビーとオレンジを基調としたスポーティーで力強い印象のデザインに仕上げています。<br>
+            また、掲載箇所に応じて記載内容を調整し、伝えたいポイントを的確に絞りました。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

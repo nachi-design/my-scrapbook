@@ -1,0 +1,44 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/banner-3/img1.webp" class="swiper-slide" alt="パーソナルジム Web広告用バナー">
+        <img src="/images/works/banner-3/img2.webp" class="swiper-slide" alt="パーソナルジム Web広告用バナー">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">パーソナルジム Web広告用バナー</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <p>バナー</p>
+          <!-- <p>印刷物</p> -->
+        </div>
+        <div class="works-detail__description">
+          <p>パーソナルジムで受けられる、女性専用の痩身エステコースのバナーを作成しました。<br>
+            Webディスプレイ広告用に制作し、20代〜30代の女性をターゲットに設定。スポーツとダイエットの中間のイメージを表現するため、選定する写真にもこだわりました。<br>
+            また、「ただ痩せるだけでなく、キレイに・健康的に痩せられる」というメリットを訴求するため、キャッチコピーを2パターン作成しています。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>

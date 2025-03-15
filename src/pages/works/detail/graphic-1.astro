@@ -1,0 +1,43 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/graphic-1/img1.webp" class="swiper-slide" alt="パンフレット">
+        <img src="/images/works/graphic-1/img2.webp" class="swiper-slide" alt="パンフレット">
+        <img src="/images/works/graphic-1/img3.webp" class="swiper-slide" alt="パンフレット">
+        <img src="/images/works/graphic-1/img4.webp" class="swiper-slide" alt="パンフレット">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">事業紹介パンフレット</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <!-- <p>バナー</p> -->
+          <p>印刷物</p>
+          <p>パンフレット</p>
+        </div>
+        <div class="works-detail__description">
+          <p>「介護色を感じないデザイン」というご要望を受け、イラストをメインに、明るく柔らかいイメージで作成しました。<br>
+            20代の求職者の目にとまるデザインを意識しております。<br>
+          一宮市内に3拠点を構えるという特徴から、表紙に一宮市にまつわるモチーフを散りばめたり、裏表紙全面を地図にするなどの工夫を盛り込みました。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>

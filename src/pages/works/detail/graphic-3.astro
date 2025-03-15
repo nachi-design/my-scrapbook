@@ -1,0 +1,41 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+import "../../../scripts/global.js";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/images/works/graphic-3/img1.webp" class="swiper-slide" alt="三つ折りパンフレット">
+        <img src="/images/works/graphic-3/img2.webp" class="swiper-slide" alt="三つ折りパンフレット">
+        <img src="/images/works/graphic-3/img3.webp" class="swiper-slide" alt="三つ折りパンフレット">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">製品パンフレット</h1>
+        <div class="works-detail__tags">
+          <!-- <p>Webデザイン</p> -->
+          <!-- <p>LPデザイン</p> -->
+          <!-- <p>コーディング</p> -->
+          <!-- <p>バナー</p> -->
+          <p>印刷物</p>
+          <p>三つ折りパンフレット</p>
+        </div>
+        <div class="works-detail__description">
+          <p>爪に優しいネイルというブランディングのイメージに合わせ、ナチュラルで柔らかいイメージのテイストに仕上げました。<br>
+            「使用方法」のイラストはオリジナルで描き上げたもので、全体の統一感を大切にデザインしております。</p>
+        </div>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
