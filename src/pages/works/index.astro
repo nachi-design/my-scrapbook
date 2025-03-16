@@ -4,7 +4,6 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import WorksList from "../../components/Works-list.astro";
 import "../../styles/global.scss";
-import "../../scripts/global.js";
 ---
 
 <Layout title="制作実績 | Nachi web design" description="制作実績ページです。これまでに制作したWebサイトやデザインの一部をご紹介しています。">
@@ -21,5 +20,6 @@ import "../../scripts/global.js";
   @use "../../styles/variables" as *;
 </style>
 
-<script is:inline>
+<script>
+  import "../../scripts/global.js";
 </script>

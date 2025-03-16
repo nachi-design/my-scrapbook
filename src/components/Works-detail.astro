@@ -5,7 +5,7 @@ import "../styles/works.scss";
 <div class="works-detail">
   <div class="container">
     <div class="works-detail__wrapper">
-      <div class="works-detail__slider">
+      <div class="works-detail__slider fadeDownTrigger">
         <!-- スライダー -->
         <div class="swiper">
           <slot name="slides" />
@@ -17,18 +17,19 @@ import "../styles/works.scss";
         </div>
       </div>
       <!-- 情報 -->
-      <div class="works-detail__text">
+      <div class="works-detail__text fadeDownTrigger delay1-pc">
         <slot name="text" />
       </div>
     </div>
 
-    <div class="works-detail__back">
+    <div class="works-detail__back fadeDownTrigger">
       <a href="/my-scrapbook_new/works/" class="btn-line-black">&#8672; 他の制作物を見る</a>
     </div>
   </div>
 </div>
 
 <script>
+  
   import Swiper from "swiper";
   import { Autoplay, Navigation, Pagination, Thumbs } from "swiper/modules";
   import "swiper/css/bundle";
@@ -61,4 +62,7 @@ import "../styles/works.scss";
       swiper: thumbnailSwiper, // サムネイルスライダーと連動！
     },
   });
+
+  import "../scripts/global.js";
+
 </script>
