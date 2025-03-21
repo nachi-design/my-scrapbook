@@ -1,0 +1,47 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/my-scrapbook/images/works/web-6/img-mockup.webp" class="swiper-slide" alt="住宅系企業コーポレートサイト">
+        <img src="/my-scrapbook/images/works/web-6/img-pick1.webp" class="swiper-slide" alt="住宅系企業コーポレートサイト">
+        <img src="/my-scrapbook/images/works/web-6/img-pick2.webp" class="swiper-slide" alt="住宅系企業コーポレートサイト">
+        <img src="/my-scrapbook/images/works/web-6/img-pick3.webp" class="swiper-slide" alt="住宅系企業コーポレートサイト">
+        <img src="/my-scrapbook/images/works/web-6/img-pick4.webp" class="swiper-slide" alt="住宅系企業コーポレートサイト">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">住宅系企業コーポレートサイト</h1>
+        <div class="works-detail__tags">
+          <p>Webデザイン</p>
+          <p>コーディング</p>
+        </div>
+        <div class="works-detail__description">
+          <p>不動産、注文住宅、リノベーション事業を展開する企業のコーポレートサイトをリニューアルしました。<br>
+          デザインはコーポレートカラーを活かし、爽やかで信頼感のあるイメージに。<br>
+          コーディングでは、jsアニメーションを積極的に用いることで動きのあるサイトに生まれ変わりました。</p>
+          </p>
+        </div>
+        <a href="https://sumarch.co.jp/" target="_blank" class="btn-color-green">VISIT SITE <i
+          class="fa-solid fa-link"></i></a>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>
