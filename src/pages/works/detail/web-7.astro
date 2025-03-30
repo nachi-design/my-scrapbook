@@ -1,0 +1,48 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/my-scrapbook/images/works/web-7/img-mockup.webp" class="swiper-slide" alt="官公庁 ダム完成周年記念サイト">
+        <img src="/my-scrapbook/images/works/web-7/img-pick1.webp" class="swiper-slide" alt="官公庁 ダム完成周年記念サイト">
+        <img src="/my-scrapbook/images/works/web-7/img-pick2.webp" class="swiper-slide" alt="官公庁 ダム完成周年記念サイト">
+        <img src="/my-scrapbook/images/works/web-7/img-pick3.webp" class="swiper-slide" alt="官公庁 ダム完成周年記念サイト">
+        <img src="/my-scrapbook/images/works/web-7/img-pick4.webp" class="swiper-slide" alt="官公庁 ダム完成周年記念サイト">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">官公庁 ダム完成周年記念サイト</h1>
+        <div class="works-detail__tags">
+          <p>Webデザイン</p>
+          <p>コーディング</p>
+        </div>
+        <div class="works-detail__description">
+          <p>ダムの周年記念サイト。感染症の影響で中止となった式典の代替として制作しました。<br>
+            式典のプログラム順にコンテンツを並べ、ワンスクロールでセクションが切り替わるアニメーションを使うことにより、オンラインでもイベントの雰囲気を感じられるようにしました。<br>
+            デザインは、厳粛さと高級感を意識し、式典の特別感を演出しました。
+          </p>
+          </p>
+        </div>
+        <a href="https://nachi-design.github.io/demo-site_view/yahagi" target="_blank" class="btn-color-green">VISIT SITE <i
+          class="fa-solid fa-link"></i></a>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>
