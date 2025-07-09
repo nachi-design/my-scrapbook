@@ -1,0 +1,46 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WorksDetail from "../../../components/Works-detail.astro";
+import "../../../styles/global.scss";
+import "../../../styles/works.scss";
+---
+
+<Layout title="制作実績詳細 | Nachi web design" description="制作実績の詳細ページです。">
+  <Header />
+  <main>
+
+    <WorksDetail>
+      <!-- スライダー -->
+      <div slot="slides" class="swiper-wrapper">
+        <img src="/my-scrapbook/images/works/web-10/img-mockup.jpg" class="swiper-slide" alt="不動産購入者向けLP">
+        <img src="/my-scrapbook/images/works/web-10/img-pick1.jpg" class="swiper-slide" alt="不動産購入者向けLP">
+        <img src="/my-scrapbook/images/works/web-10/img-pick2.jpg" class="swiper-slide" alt="不動産購入者向けLP">
+        <img src="/my-scrapbook/images/works/web-10/img-pick3.jpg" class="swiper-slide" alt="不動産購入者向けLP">
+      </div>
+
+      <!-- 情報 -->
+      <div slot="text">
+        <h1 class="works-detail__title">不動産購入者向けLP</h1>
+        <div class="works-detail__tags">
+          <p>Webデザイン</p>
+          <p>コーディング</p>
+        </div>
+        <div class="works-detail__description">
+          <p>土地探しを始めたばかりの初心者を主なターゲットとしたランディングページを制作しました。<br>
+          訪問者が安心して読み進められるよう、メインビジュアルに初心者マークのアイコンを配置し、「はじめての方でもわかりやすい」というメッセージを視覚的に直感で伝える構成としました。</p>
+          <p>デザイン面では、既存のブランドカラーに初心者マークのグリーンを加えることで、全体のトーンに調和を持たせた配色にしています。</p>
+          <p>また、専門用語や制度が多くなりがちな不動産情報を、イラストを多用することで視覚的にサポートし、ページ全体が固くなりすぎないように工夫しています。情報の正確さとわかりやすさのバランスを意識した設計を目指しました。</p>
+        </div>
+        <a href="https://www.housebokan.co.jp/landing/search-guide" target="_blank" class="btn-color-green">VISIT SITE <i
+          class="fa-solid fa-link"></i></a>
+      </div>
+    </WorksDetail>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  @use "../../../styles/variables" as *;
+</style>
